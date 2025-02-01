@@ -14,9 +14,9 @@ def extract_qa_pairs(text):
     answer = None
 
     for line in lines:
-        if "السؤال" in line:
+        if "السؤال :" in line:
             question = line.split(":")[-1].strip()  # Extract the question after the colon
-        elif "الإجابة" in line:
+        elif "الإجابة :" in line:
             answer = line.split(":")[-1].strip()  # Extract the answer after the colon
             if question and answer:
                 qa_pairs.append((question, answer))

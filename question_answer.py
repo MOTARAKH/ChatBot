@@ -22,8 +22,8 @@ def answer_question(vectorstore, query):
             for i, line in enumerate(lines):
                 if query.lower() in line.lower():
                     # Extract the answer (assumes the answer follows the question)
-                    if i + 1 < len(lines) and (lines[i + 1].startswith("Answer:") or lines[i + 1].startswith("الإجابة:")):
-                        return lines[i + 1].replace("Answer:", "").replace("الإجابة:", "").strip()
+                    if i + 1 < len(lines) and (lines[i + 1].startswith("Answer:") or lines[i + 1].startswith("الإجابة :")):
+                        return lines[i + 1].replace("Answer:", "").replace("الإجابة :", "").strip()
 
             # Fallback if no specific answer is found
             return "Sorry, I couldn't find a direct answer to your question."
