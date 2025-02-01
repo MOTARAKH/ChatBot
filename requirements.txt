@@ -1,0 +1,4 @@
+flask
+langchain-community
+sentence-transformers
+python-dotenv
